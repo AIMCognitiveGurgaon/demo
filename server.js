@@ -17,7 +17,7 @@ var model = 'https://api.projectoxford.ai/luis/v2.0/apps/e68599cf-460d-4c38-ac4f
 var bot = new builder.UniversalBot(connector);
 server.post('bankerbot/v1/messages', connector.listen());
 
-server.listen(config.port,config.ip,function () {
+server.listen(config.port,function () {
 	try{
 		console.log('%s listening to %s', server.name, server.url);
 	}
@@ -84,7 +84,7 @@ bot.dialog('/personalCard', [
         switch (results.response.index) {
            
             case 0:
-                //builder.Prompts.text("We’ve the following cards for you with delighting cashback offers ! Please choose the card you’d like to have");
+                //builder.Prompts.text("Weâ€™ve the following cards for you with delighting cashback offers ! Please choose the card youâ€™d like to have");
                 session.beginDialog('/Cashbacks');
                 break;
             case 1:
@@ -124,7 +124,7 @@ bot.dialog('/Cashbacks', [
     buttons1.push(builder.CardAction.openUrl(session, "https://www.wellsfargo.com/credit-cards/", "Click here to apply"));  
 
     var attachments1 = [];
-    var card1 = CreateHeroCard(session, builder, "1) Credit card", "Wells Fargo Cash Wise Visa® Card", 
+    var card1 = CreateHeroCard(session, builder, "1) Credit card", "Wells Fargo Cash Wise VisaÂ® Card", 
                             " ",
                             "https://www01.wellsfargomedia.com/assets/images/photography/product/credit-cards/cash_wise_visa_card.png",  
                             buttons1);
@@ -155,7 +155,7 @@ bot.dialog('/Cashbacks', [
         buttons3.push(builder.CardAction.openUrl(session, "https://qwww252.americanexpress.com/inga3/uk/pers/begin.do?perform=IntlEapp:UK:platinum_revolve_fb&journey=B&intlink=uk-amex-cardshop-PlatinumCashBackCreditCard-detail-applynow-main ", "Click here to apply"));  
 
     var attachments3 = [];
-    var card3 = CreateHeroCard(session, builder, "3) Credit card", "Wells Fargo Home Rebate Visa Signature® Card ", 
+    var card3 = CreateHeroCard(session, builder, "3) Credit card", "Wells Fargo Home Rebate Visa SignatureÂ® Card ", 
                             " ",
                             "https://www01.wellsfargomedia.com/assets/images/photography/product/credit-cards/home_rebate_visa_signature_card.png",  
                             buttons3);
