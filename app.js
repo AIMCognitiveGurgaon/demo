@@ -15,7 +15,7 @@ var connector = new builder.ChatConnector({
 });
 var model = 'https://api.projectoxford.ai/luis/v2.0/apps/e68599cf-460d-4c38-ac4f-06054916277b?subscription-key=95bb5ae5a7814367b09660bfc501a2a1&verbose=true';
 var bot = new builder.UniversalBot(connector);
-server.post('bankerbot/v1/messages', connector.listen());
+server.post('/api/messages', connector.listen());
 
 server.listen(config.port,function () {
 	try{
