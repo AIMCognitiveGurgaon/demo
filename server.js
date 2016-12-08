@@ -202,7 +202,7 @@ bot.dialog('/thankYou',[
 
 ])
 */
-/*
+
 bot.dialog('/', [
    function (session) {
    console.log("Bot start!!!!")
@@ -218,4 +218,4 @@ bot.dialog('/', [
         }
         
 ]);
-*/
+
