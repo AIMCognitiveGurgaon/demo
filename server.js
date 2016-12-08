@@ -23,7 +23,7 @@ server.get(/.*/, restify.serveStatic({
 }));
 
 
-server.listen(process.env.PORT || 5601,function () {
+server.listen(5601,function () {
 	try{
 		console.log('%s listening to %s', server.name, server.url);
 	}
