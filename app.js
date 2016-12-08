@@ -17,7 +17,7 @@ var model = 'https://api.projectoxford.ai/luis/v2.0/apps/e68599cf-460d-4c38-ac4f
 var bot = new builder.UniversalBot(connector);
 server.post('bankerbot/v1/messages', connector.listen());
 
-server.listen(function () {
+server.listen(process.env.PORT || 5601,function () {
 	try{
 		console.log('%s listening to %s', server.name, server.url);
 	}
