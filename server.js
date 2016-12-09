@@ -22,7 +22,7 @@ server.get(/.*/, restify.serveStatic({
 	'default': 'index.html'
 }));
 
-server.listen(5601,function () {
+server.listen(process.env.port ,function () {
 	try{
 		console.log('%s listening to %s', server.name, server.url);
 	}
